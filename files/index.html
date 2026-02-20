@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crisis Connect — Report a Crisis</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-brand">
+    <div class="logo-wrap">
+      <svg class="logo-svg" viewBox="0 0 24 24">
+        <circle cx="12" cy="14" r="2.2" fill="#2D7EFF"/>
+        <path d="M8.5 17.5C9.5 16.2 10.7 15.4 12 15.4C13.3 15.4 14.5 16.2 15.5 17.5" stroke="#2D7EFF" stroke-width="1.5" fill="none"/>
+        <path d="M5.5 20C7.2 17.5 9.5 16 12 16C14.5 16 16.8 17.5 18.5 20" stroke="#5B9FFF" stroke-width="1.5" fill="none"/>
+        <path d="M12 11V5M12 5L9.5 7.5M12 5L14.5 7.5" stroke="#00D4FF" stroke-width="1.6"/>
+      </svg>
+    </div>
+
+    <div class="brand-text">
+      <div class="brand-name">Crisis<span>Connect</span></div>
+      <div class="brand-sub">Emergency Network</div>
+    </div>
+  </div>
+
+  <div class="status-pill">
+    <div class="status-dot"></div>System Active
+  </div>
+</div>
+
+<div class="app">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Emergency Reporting Portal</div>
+      <div class="hero-title">Report a <span>Crisis</span></div>
+      <div class="hero-desc">
+        Your report is instantly verified and broadcast to nearby residents and emergency responders.
+      </div>
+    </div>
+  </div>
+
+  <div id="formView">
+
+    <div class="crisis-grid">
+
+  <!-- FIRE -->
+  <div class="crisis-card" data-type="fire" onclick="selectCrisis(this)">
+    <div class="crisis-emoji">🔥</div>
+    <div class="crisis-label">Fire</div>
+  </div>
+
+  <!-- FLOOD -->
+  <div class="crisis-card" data-type="flood" onclick="selectCrisis(this)">
+    <div class="crisis-emoji">🌊</div>
+    <div class="crisis-label">Flood</div>
+  </div>
+
+  <!-- MEDICAL -->
+  <div class="crisis-card" data-type="medical" onclick="selectCrisis(this)">
+    <div class="crisis-emoji">🚑</div>
+    <div class="crisis-label">Medical</div>
+  </div>
+
+  <!-- ACCIDENT -->
+  <div class="crisis-card" data-type="accident" onclick="selectCrisis(this)">
+    <div class="crisis-emoji">🚗</div>
+    <div class="crisis-label">Accident</div>
+  </div>
+
+  <!-- EARTHQUAKE -->
+  <div class="crisis-card" data-type="earthquake" onclick="selectCrisis(this)">
+    <div class="crisis-emoji">🌍</div>
+    <div class="crisis-label">Earthquake</div>
+  </div>
+
+  <!-- LANDSLIDE -->
+  <div class="crisis-card" data-type="landslide" onclick="selectCrisis(this)">
+    <div class="crisis-emoji">⛰️</div>
+    <div class="crisis-label">Landslide</div>
+  </div>
+
+  <!-- POWER OUTAGE -->
+  <div class="crisis-card" data-type="power" onclick="selectCrisis(this)">
+    <div class="crisis-emoji">⚡</div>
+    <div class="crisis-label">Power Outage</div>
+  </div>
+
+  <!-- VIOLENCE / THREAT -->
+  <div class="crisis-card" data-type="violence" onclick="selectCrisis(this)">
+    <div class="crisis-emoji">🚨</div>
+    <div class="crisis-label">Threat</div>
+  </div>
+
+  <!-- OTHER -->
+  <div class="crisis-card" data-type="other" onclick="selectCrisis(this)">
+    <div class="crisis-emoji">❗</div>
+    <div class="crisis-label">Other</div>
+  </div>
+
+</div>
+    
+ 
+
+<!-- REPORTER DETAILS -->
+<div class="form-card">
+  <div class="card-title">Reporter Details</div>
+
+  <div class="form-group">
+    <label class="form-label">Full Name</label>
+    <input type="text" class="input-field" placeholder="Enter your name">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Phone Number</label>
+    <input type="tel" class="input-field" placeholder="Enter phone number">
+  </div>
+
+  <!-- ANONYMOUS TOGGLE -->
+  <div class="anon-row">
+    <div>
+      <div class="form-label">Report Anonymously</div>
+      <div class="form-hint">Your identity will be hidden from public view</div>
+    </div>
+
+    <div class="anon-toggle" onclick="toggleAnon()">
+      <div class="toggle-track">
+        <div class="toggle-thumb"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- INCIDENT DETAILS -->
+<div class="form-card">
+  <div class="card-title">Incident Details</div>
+
+  <div class="form-group">
+    <label class="form-label">Describe what is happening</label>
+    <textarea class="input-field textarea"
+      placeholder="Explain the situation, number of people affected, risks, etc."></textarea>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Time of Incident</label>
+    <input type="datetime-local" class="input-field">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Upload Photo (optional)</label>
+    <input type="file" class="input-field file-input">
+  </div>
+
+</div>
+    <!-- LOCATION -->
+    <div class="form-card">
+      <div class="card-title">Location</div>
+
+      <div class="location-box" onclick="detectLocation()">
+        <div class="loc-icon">📍</div>
+        <div class="loc-info">
+          <div class="loc-title">Detect Location</div>
+          <div class="loc-sub">Tap to auto-detect</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBMIT -->
+    <button class="submit-btn" onclick="submitReport()">Submit Report</button>
+
+  </div>
+
+  <!-- SUCCESS SCREEN -->
+  <div class="success-screen">
+    <div class="success-ring">✓</div>
+    <div class="success-title">Report Sent</div>
+
+    <div class="report-id">
+      <div class="report-id-label">Report ID</div>
+      <div class="report-id-value">CR-00000</div>
+    </div>
+
+    <button class="new-report-btn" onclick="newReport()">New Report</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
