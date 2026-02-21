@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="photo.png" alt="Project Banner" width="100%">
+  <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
 #Crisis-Connect 🎯
