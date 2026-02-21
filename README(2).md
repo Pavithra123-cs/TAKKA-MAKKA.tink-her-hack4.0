@@ -2,27 +2,65 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [CALL MEEE HELPPP] 🎯
+#Crisis-Connect  🎯
 
 ## Basic Details
 
 ### Team Name: [TAKKAA...MAKKAAAA]
 
 ### Team Members
-- Member 1: [PAVITHRA N.P] - [ICCS]
-- Member 2: [SIFANA S] - [ICCS]
+- Member 1: [PAVITHRA N.P] - [ICCSCEM]
+- Member 2: [SIFANA S] - [ICCSCEM]
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
-### Project Description
-[2-3 lines about what your project does]
+### Project Description[Crisis Connect is a web-based emergency reporting system that allows users to instantly report accidents, floods, fires, or other crises in their area. The platform supports anonymous reporting and optional photo uploads, ensuring quick and accessible participation from anyone. By collecting and displaying real-time incident data, the system helps communities stay informed, improve situational awareness, and respond faster during emergencies.
+]
 
 ### The Problem statement
-[What problem are you solving?]
+[What problem are you solving?:
+✅ Problem Statement
+
+During emergencies such as floods, accidents, fires, or local crises, people often struggle to:
+
+Report incidents quickly to others nearby
+
+Access real-time, location-specific alerts
+
+Share information without creating accounts
+
+Know what is happening around them immediately
+
+Existing systems are either:
+
+Too slow (official reporting channels)
+
+Not location-focused for common people
+
+Require login or complex steps
+
+Not designed for community-driven alerts
+
+This leads to delayed response, misinformation, and avoidable risks to public safety.]
 
 ### The Solution
-[How are you solving it?]
+[How are you solving it?:
+✅ Proposed Solution – Crisis Connect
+
+Crisis Connect is a real-time community crisis reporting platform where:
+
+Any user can report emergencies instantly
+
+Login is not mandatory (anonymous reporting allowed)
+
+Users can optionally upload photos as proof
+
+Reports include location, time, and description
+
+Other nearby users get awareness about incidents
+
+This creates a crowdsourced safety network that helps people stay informed and react faster.]
 
 ---
 
@@ -31,10 +69,14 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used[
+HTML
+CSS
+JavaScript
+SQL]
+- Frameworks used: [Node.js (backend runtime)]
+- Libraries used: [mysql2 ]
+- Tools used: [e.g., VS Code, Git, MYSQL]
 
 **For Hardware:**
 - Main components: [List main components]
@@ -44,14 +86,14 @@
 ---
 
 ## Features
+Feature 1: Real-Time Crisis Reporting – Users can report incidents like accidents, floods, fires, or other emergencies instantly through the website.
 
-List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+Feature 2: Anonymous Reporting Option – Logging in is not mandatory, and users can choose to remain anonymous while submitting reports.
 
----
+Feature 3: Optional Photo Upload – Users can upload images related to the incident to provide visual evidence, enhancing the report’s credibility.
+
+Feature 4: Easy-to-Use Interface – Mobile-first, responsive design with a clean UI allows quick reporting and smooth navigation for all users.
+
 
 ## Implementation
 
@@ -59,14 +101,17 @@ List the key features of your project:
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
-```
+# Install Node.js dependencies
+npm install
 
 #### Run
 ```bash
-[Run commands - e.g., npm start, python app.py]
-```
+`
+# Start the server
+node server.js
 
+# Open the front-end HTML file in a browser (e.g., index.html)
+# If using a live server extension, start it from VS Code or similar IDE
 ### For Hardware:
 
 #### Components Required
@@ -100,9 +145,121 @@ List the key features of your project:
 *Explain your system architecture - components, data flow, tech stack interaction*
 
 **Application Workflow:**
+Frontend (Client)
 
-![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
+Built using HTML, CSS, and JavaScript.
+
+Provides a responsive user interface for users to:
+
+Select crisis type
+
+Upload optional photos
+
+Enter reporter details (optional anonymous mode)
+
+Describe incident and location
+
+Handles form validation and sends reports to the backend via HTTP POST requests.
+
+Backend (Server)
+
+Built using Node.js with Express.js framework.
+
+Handles:
+
+Receiving user reports
+
+Storing report data in the database
+
+Sending success responses with generated Report IDs
+
+Implements CORS to allow communication with the frontend.
+
+Database (Storage)
+
+MySQL database stores all incident reports.
+
+Table reports contains columns:
+
+id (auto-increment primary key)
+
+crisis_type
+
+name
+
+phone
+
+description
+
+incident_time
+
+location
+
+photo (optional)
+
+anonymous flag
+
+Ensures data persistence and enables future analytics.
+
+Optional Extensions (Future)
+
+WhatsApp notifications for users who install the app.
+
+Real-time alerts to nearby residents or authorities.
+
+Analytics dashboard for monitoring crisis trends.
+
+Data Flow
+
+User Interaction
+
+User fills in the crisis report form → Clicks Submit.
+
+Frontend Processing
+
+Validates inputs
+
+Sends a POST request to server.js endpoint /report.
+
+Backend Processing
+
+Receives the request
+
+Inserts report data into MySQL database
+
+Generates a Report ID
+
+Sends a success response back to the frontend.
+
+Database Storage
+
+All report details are stored securely in MySQL.
+
+Enables querying and future analytics.
+
+User Feedback
+
+Frontend displays success message with Report ID.
+
+Anonymous users remain unidentified in the database.
+
+Visual Architecture Diagram (Simplified)
++-------------------+          HTTP POST           +-------------------+
+|    Frontend       |  ------------------------>  |     Backend       |
+| (HTML/CSS/JS)     |                             | (Node.js/Express) |
+|                   | <------------------------  |                   |
+|  - Form inputs    |        Success/ID          | - DB operations   |
+|  - Photo upload   |                             | - Generate ID     |
++-------------------+                             +-------------------+
+                                                        |
+                                                        | MySQL Queries
+                                                        v
+                                              +-------------------+
+                                              |     Database      |
+                                              |   MySQL Server    |
+                                              |  - Reports table  |
+                                              +-------------------+
+
 
 ---
 
@@ -370,22 +527,27 @@ python script.py -v --format json data.json
 
 ---
 
-## AI Tools Used (Optional - For Transparency Bonus)
+AI Tools Used (Optional - For Transparency Bonus)
 
 If you used AI tools during development, document them here for transparency:
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
+Tool Used: ChatGPT, GitHub Copilot
 
-**Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
+Purpose: Assisted in code generation, debugging, and optimization.
 
-**Key Prompts Used:**
-- "Create a REST API endpoint for user authentication"
-- "Debug this async function that's causing race conditions"
-- "Optimize this database query for better performance"
+Example: "Generated backend Express.js routes for crisis reporting"
 
+Example: "Suggested MySQL table structure for storing reports"
+
+Example: "Helped create responsive frontend components in HTML/CSS"
+
+Key Prompts Used:
+
+"Create a REST API endpoint for submitting crisis reports"
+
+"Debug MySQL connection issues in Node.js"
+
+"Write responsive HTML/CSS layout for a mobile-first reporting form"
 **Percentage of AI-generated code:** [Approximately X%]
 
 **Human Contributions:**
@@ -400,8 +562,8 @@ If you used AI tools during development, document them here for transparency:
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
+- [PAVITHRA N.P]: [Frontend development,Backend development, Database design , etc.]
+- [SIFANA S]: [e.g., Frontend development]
 - [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
 
 ---
