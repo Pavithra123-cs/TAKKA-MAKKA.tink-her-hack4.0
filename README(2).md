@@ -1,6 +1,5 @@
 <p align="center">
-  <img src="<img width="1024" height="1536" alt="photo.png" src="https://github.com/user-attachments/assets/e628f9be-5f0f-4e43-94d0-eb5485078849" />
-" alt="Project Banner" width="100%">
+  <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
 #Crisis-Connect 🎯
