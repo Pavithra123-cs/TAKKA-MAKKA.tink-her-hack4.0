@@ -13,7 +13,7 @@
 - Member 2: [SIFANA S] - [ICCSCEM]
 
 ### Hosted Project Link
-[]
+[https://takka-makkahackathon.vercel.app/]
 
 ### Project Description[Crisis Connect is a web-based emergency reporting system that allows users to instantly report accidents, floods, fires, or other crises in their area. The platform supports anonymous reporting and optional photo uploads, ensuring quick and accessible participation from anyone. By collecting and displaying real-time incident data, the system helps communities stay informed, improve situational awareness, and respond faster during emergencies.
 ]
