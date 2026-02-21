@@ -13,7 +13,7 @@
 - Member 2: [SIFANA S] - [ICCSCEM]
 
 ### Hosted Project Link
-[mention your project hosted link here]
+[]
 
 ### Project Description[Crisis Connect is a web-based emergency reporting system that allows users to instantly report accidents, floods, fires, or other crises in their area. The platform supports anonymous reporting and optional photo uploads, ensuring quick and accessible participation from anyone. By collecting and displaying real-time incident data, the system helps communities stay informed, improve situational awareness, and respond faster during emergencies.
 ]
@@ -128,15 +128,17 @@ node server.js
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
+![https://drive.google.com/file/d/1KNoLp9czu5Ff0_BEdgLK6XpEpQ5bq_xk/view?usp=drive_link](Add screenshot 1 here with proper name)
 *Add caption explaining what this shows*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![https://drive.google.com/file/d/14YadwpJC10yNo2D8VGL_wZoMk5T4ai0p/view?usp=drive_link](Add screenshot 2 here with proper name)
+comes to report
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
+![https://drive.google.com/file/d/1AD6qKE4AV49h4YnxC2wFkqcXItkL61EY/view?usp=drive_link]
+features
+[https://drive.google.com/file/d/1PKmzc-yGtQTRh5FF2joutHG6vwXlOfiP/view?usp=drive_link]-report mandatory things
+[https://drive.google.com/file/d/11xYNj0Vt0o73awV22zf42BZtmDaR8FMp/view?usp=drive_link]-report success
+[https://drive.google.com/file/d/1E2qkcrZL5C-ndQtLLchQN07zxuIM9xhS/view?usp=drive_link]-db storage
 #### Diagrams
 
 **System Architecture:**
@@ -518,12 +520,11 @@ python script.py -v --format json data.json
 ## Project Demo
 
 ### Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
-
-*Explain what the video demonstrates - key features, user flow, technical highlights*
+[https://drive.google.com/file/d/1hnLe1HWhH7jQOWEYhxlH2nO0noLQNeKx/view?usp=drive_link]
+The person can report the details of the crisis and then its saved in db is shown in the video 
 
 ### Additional Demos
-[Add any extra demo materials/links - Live site, APK download, online demo, etc.]
+[https://drive.google.com/file/d/1hnLe1HWhH7jQOWEYhxlH2nO0noLQNeKx/view?usp=drive_link.]
 
 ---
 
